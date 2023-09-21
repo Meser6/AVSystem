@@ -1,0 +1,5 @@
+node_modules
+cypress/reportTemplate
+cypress/report
+
+cypress/downloads
