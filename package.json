@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "clean:reportTemplate": "rm -R -f cypress/reportTemplate",
-    "clean:report": "rm -R -f cypress/report",
+    "clean:report": "rm -R -f cypress/report && mkdir cypress\\report",
     "pretest": "npm run clean:report && npm run clean:reportTemplate",
     "combine-report": "mochawesome-merge cypress/reportTemplate/*.json > merged_report.txt > cypress/report/report.json",
     "generate-report": "marge cypress/report/report.json -f report -o cypress/report",
     "posttest": "npm run combine-report && npm run generate-report",
-    "test:e2e": "(npm run pretest && npx cypress run) || (npm run posttest && npm run clean:reportTemplate)",
+    "test:e2e": "(npm run pretest && npx cypress run) && (npm run posttest && npm run clean:reportTemplate)",
     "test:e2e:open": "npx cypress open --e2e --browser chrome"
   },
   "author": "Kuba Kaczmarczyk",
