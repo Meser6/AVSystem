@@ -4,7 +4,7 @@ Cypress.Commands.add("visitPage", (pageName) => {
   cy.fixture("pages").then((pages) => {
     cy.visit(pages[pageName]);
   });
-  cy.checkLoading();
+  cy.websiteIsLoaded();
 });
 
 Cypress.Commands.add("openInTheSameTab", (element) => {
