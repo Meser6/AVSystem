@@ -61,6 +61,7 @@ describe("Form page", () => {
 });
 
 function checkSummary(name, alterEgo, power) {
+  Form.summary.summaryContainer.should("be.visible");
   Form.summary.nameValue.invoke("text").should("eq", name);
   Form.summary.alterEgoValue.invoke("text").should("eq", alterEgo);
   Form.summary.powerValue.invoke("text").should("eq", power);
