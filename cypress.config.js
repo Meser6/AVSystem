@@ -10,7 +10,7 @@ module.exports = defineConfig({
     viewportWidth: 1920,
     video: false,
     retries: {
-      runMode: 2,
+      runMode: 0,
       openMode: 0,
     },
     screenshotsFolder: "cypress/report/screenshots",
