@@ -21,16 +21,16 @@ class Form {
   };
   summary = {
     get summaryContainer() {
-      return cy.get(`[class="container results"]`);
+      return cy.get(`[class="container results"]>div`);
     },
     get nameValue() {
-      return this.summaryContainer.contains(`Name`).siblings();
+      return this.summaryContainer.contains(`Name`).siblings("div");
     },
     get alterEgoValue() {
-      return this.summaryContainer.contains(`Alter Ego`).siblings();
+      return this.summaryContainer.contains(`Alter Ego`).siblings("div");
     },
     get powerValue() {
-      return this.summaryContainer.contains(`Power`).siblings();
+      return this.summaryContainer.contains(`Power`).siblings("div");
     },
     get editButton() {
       return this.summaryContainer.get(`button`).contains("Edit");
