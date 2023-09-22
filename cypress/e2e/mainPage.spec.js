@@ -1,7 +1,7 @@
 import MainPage from "../support/pages/mainPage";
 
 beforeEach(() => {
-  cy.visit("/");
+  cy.visitPage("main");
 });
 
 describe("Main page", () => {
